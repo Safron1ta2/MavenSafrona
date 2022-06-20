@@ -4,5 +4,7 @@ public class Test {
         Person person = new Person();
         person.setName("Safron");
         System.out.println(person.getName());
+        person.setAge(99);
+        System.out.println(person.getAge());
     }
 }
