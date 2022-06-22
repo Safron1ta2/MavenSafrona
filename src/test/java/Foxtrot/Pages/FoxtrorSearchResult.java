@@ -1,9 +1,7 @@
 package Foxtrot.Pages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.testng.annotations.Test;
 
 import java.util.Arrays;
 import java.util.List;
@@ -40,15 +38,24 @@ public class FoxtrorSearchResult extends BasePage{
     }
 
     private String count;
+    private String countOfOppo;
 
     public String getCount(){
         return this.count;
     }
 
-    public void getCountText(String filterName){
+    public String getCountTextForOppo(){
+        String[] count = getElementByXpath(PRODUCT_COUNT_MASAGE).getText().split(" ");
+        return count[0];
+    }
+
+    public void setCountText(String filterName){
         waitUntilTitleContainsText(filterName);
         count = getElementByXpath(PRODUCT_COUNT_MASAGE).getText().substring(0,2);
+    }
 
+    public void setCountTextForOppo(String filterCount){
+        waitUntilTitleContainsText(filterCount);
     }
 
 

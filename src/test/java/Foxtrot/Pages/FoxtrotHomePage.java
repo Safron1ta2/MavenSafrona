@@ -22,6 +22,9 @@ public class FoxtrotHomePage extends BasePage {
 
     private static final String PС_CATEGORIE = "//div[@class='main-page-container']//li[@data-category='32021']";
     private static final String GAMER_CATEGORIE = "//div[@class='main-page-container']//li[@data-category='32111']";
+    private static final String PHONES = "//div[@class='main-page-container']//li[@data-category='32014']";
+
+
 
     public WebElement categorieKids(){
         return driver.findElement(By.xpath(CATEGORIE_ALL_FOR_KIDS));
@@ -49,9 +52,16 @@ public class FoxtrotHomePage extends BasePage {
     public WebElement forGamerCategorie(){
         return getElementByXpath(GAMER_CATEGORIE);
     }
+    public WebElement phoneCategory(){
+        return getElementByXpath(PHONES);
+    }
 
     public void moveToPС(){
         moveCursor(PС_CATEGORIE);
+    }
+
+    public void moveToPhones(){
+        moveCursor(PHONES);
     }
 
     public FoxtrorSearchResult search(String objectForSearch){
