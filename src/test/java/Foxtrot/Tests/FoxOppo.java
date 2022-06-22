@@ -22,5 +22,7 @@ public class FoxOppo extends TestInit {
         System.out.println(foxtrorSearchResult.getCountTextForOppo());
         System.out.println(oppoCategoryPage.getOppoPhones().size());
         Assert.assertEquals(Integer.parseInt(foxtrorSearchResult.getCountTextForOppo()), oppoCategoryPage.getOppoPhones().size());
+        oppoCategoryPage.getOppoPhones().get(0).click();
+
     }
 }
