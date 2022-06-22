@@ -22,7 +22,7 @@ public class FoxtrotAction extends TestInit{
         catalogView.monitor().click();
         foxtrotMonitorPage.filtrBtnSamsung().click();
         foxtrotMonitorPage.okBtn().click();
-        foxtrorSearchResult.getCountText("SAMSUNG");
+        foxtrorSearchResult.setCountText("SAMSUNG");
         foxtrotMonitorPage.getMonitors().size();
         Assert.assertEquals(Integer.parseInt(foxtrorSearchResult.getCount()), foxtrotMonitorPage.getMonitors().size());
 
