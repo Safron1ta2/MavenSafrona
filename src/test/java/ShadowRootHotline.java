@@ -16,7 +16,6 @@ public class ShadowRootHotline {
             e.printStackTrace();
         }
     }
-
     @Test
     public void test(){
         WebDriverManager.chromedriver().setup();
