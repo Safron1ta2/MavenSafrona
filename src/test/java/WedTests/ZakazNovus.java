@@ -4,6 +4,7 @@ import WedTests.Pages.ZakazHomePage;
 import WedTests.Pages.ZakazNovusBuy;
 import WedTests.Pages.ZakazNovusMainPage;
 import WedTests.Pages.ZakazNovusResultSearchPage;
+import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
 public class ZakazNovus extends TestInit {
@@ -24,6 +25,5 @@ public class ZakazNovus extends TestInit {
         zakazNovusBuy.buyNemiroffDelikat().click();
         sleep(3);
         zakazNovusBuy.deliveryByNP().click();
-
     }
 }
